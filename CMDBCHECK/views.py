@@ -13,6 +13,4 @@ def do_scanhots(request):
             else:
                 pass
     return HttpResponse("扫描完成")
-def scanhots(request):
-    return HttpResponse('自动化资产扫描')
 
