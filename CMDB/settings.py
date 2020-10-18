@@ -130,3 +130,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+commands = {
+    'hostname':'hostname',
+    'os_type':'uname',
+    'os_distribution':'dmidecodes -s system-manufacturer',
+    'os_release':"hostnamectl | grep Operating | awk -F ':' '{print $2}'",
+    'MAC':'cat /sys/class/net/`[^vtlsb]`*/address',
+}
